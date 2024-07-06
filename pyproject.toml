@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "dni-based-prediction"
+version = "1.0.0"
+description = "Based on a Masters project, I develop this implementation of a a regresion problem"
+authors = ["ricardoleal20 <rick.leal420@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10, <3.13"
+numpy = "~=1.26.2"
+pandas = "~=2.2.2"
+scikit-learn = "~=1.5.1"
+matplotlib = "~=3.9.1"
+seaborn = "~=0.13.2"
+statsmodels = "~=0.14.2"
+jinja2 = "~=3.1.4"
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "~=2.3.1"
+pylint = "~=3.2.5"
+pyright = "~=1.1.370"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
