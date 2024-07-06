@@ -12,24 +12,24 @@ The motivation behind this project is to explore and understand how different re
 
 ### 1. Multiple Linear Regression
 
-Multiple linear regression models the relationship between a dependent variable \( y \) and multiple independent variables \( X_1, X_2, \ldots, X_p \) using the following formula:
+Multiple linear regression models the relationship between a dependent variable $y$ and multiple independent variables $X_1, X_2, \ldots, X_p$ using the following formula:
 
-\[
+$$
 y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \ldots + \beta_p X_p + \epsilon
-\]
+$$
 
 where:
-- \( y \) is the dependent variable.
-- \( \beta_0 \) is the intercept.
-- \( \beta_1, \beta_2, \ldots, \beta_p \) are the coefficients of the independent variables.
-- \( X_1, X_2, \ldots, X_p \) are the independent variables.
-- \( \epsilon \) is the error term.
+- $y$ is the dependent variable.
+- $\beta_0$ is the intercept.
+- $\beta_1, \beta_2, \ldots, \beta_p$ are the coefficients of the independent variables.
+- $X_1, X_2, \ldots, X_p$ are the independent variables.
+- $\epsilon$ is the error term.
 
 The coefficients are estimated by minimizing the sum of squared residuals (RSS):
 
-\[
+$$
 RSS = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 = \sum_{i=1}^{n} \left(y_i - \left(\beta_0 + \sum_{j=1}^{p} \beta_j X_{ij}\right)\right)^2
-\]
+$$
 
 ### 2. Multiple Linear Regression with Step-wise Selection
 
@@ -43,13 +43,13 @@ Step-wise selection is an iterative method that combines forward and backward re
 
 Elastic net regression is a regularization technique that linearly combines L1 (Lasso) and L2 (Ridge) penalties. It is useful when there are multiple correlated features.
 
-\[
-\hat{\beta} = \arg \min_{\beta} \left\{ \sum_{i=1}^{n} (y_i - \beta_0 - \sum_{j=1}^{p} \beta_j X_{ij})^2 + \lambda_1 \sum_{j=1}^{p} |\beta_j| + \lambda_2 \sum_{j=1}^{p} \beta_j^2 \right\}
-\]
+$$
+\hat{\beta} = \arg \min_{\beta} { \sum_{i=1}^{n} (y_i - \beta_0 - \sum_{j=1}^{p} \beta_j X_{ij})^2 + \lambda_1 \sum_{j=1}^{p} |\beta_j| + \lambda_2 \sum_{j=1}^{p} \beta_j^2 }
+$$
 
 where:
-- \( \lambda_1 \) controls the L1 penalty.
-- \( \lambda_2 \) controls the L2 penalty.
+- $\lambda_1$ controls the L1 penalty.
+- $\lambda_2$ controls the L2 penalty.
 
 ## Project Structure
 
