@@ -34,11 +34,18 @@ if __name__ == "__main__":
             except Exception as exc:
                 raise TypeError(f"The DNI provided {args.dni} is not a number.") from exc
             # Then, evaluate the model to use
-            if args.algorithm not in ["all", "lineal", "elastic", "step_wise"]:
+            if args.algorithm not in [
+                "all", "regression", "classification",
+                "lineal", "elastic", "step_wise",
+                "decision_tree", "bagging", "pasting", "random_forest", "gbm"
+            ]:
                 raise NotImplementedError(
                     f"The algorithm selected was {args.algorithm} "+
                     "but the only available options are: "+
-                    '["all", "lineal", "elastic", "step_wise"].'
+                    '["all", "regression", "classification", ' +
+                    '"lineal", "elastic", "step_wise",' +
+                    ' "decision_tree", "bagging", "pasting", ' +
+                    '"random_forest", "gbm"].'
                     )
             generate_model(
                 str(dni),
